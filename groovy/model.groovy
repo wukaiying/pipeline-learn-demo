@@ -5,10 +5,12 @@ pipeline{
     agent any
     stages{
         stage("Hello Pipeline") {
-            script {
-                println "Hello Pipeline!"
-                println env.JOB_NAME
-                println env.BUILD_NUMBER
+            steps {
+                script {
+                    println "Hello Pipeline!"
+                    println env.JOB_NAME
+                    println env.BUILD_NUMBER
+                }
             }
         }
     }
